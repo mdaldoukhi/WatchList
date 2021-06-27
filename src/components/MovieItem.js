@@ -1,23 +1,41 @@
+/* Store */
 import movieStore from "../stores/movieStore";
-import { observer } from 'mobx-react'
+/* Library */
+import { observer } from "mobx-react";
+/* Styles */
 import { ItemWrapper, ActionTools } from "../styles";
 
 const MovieItem = (props) => {
+    /* will change the watched to unwatch */
     const handleClick = () => {
-        movieStore.updateStatus(props.movie)
-    }
+        movieStore.updateStatus(props.movie);
+    };
+    /* will delete the movie from list */
     const deleteClick = () => {
-        movieStore.deleteMovies(props.movie.id)
-    }
-    
+        movieStore.deleteMovies(props.movie.id);
+    };
     return (
+        /* Wrap the Item */
         <ItemWrapper>
             <p>{props.movie.name}</p>
+            {/* Buttons section */}
             <ActionTools>
-                <button onClick={handleClick} type="button" className="btn btn-outline-success">{props.movie.status}</button>
-                <button onClick={deleteClick} type="button" className="btn btn-outline-danger">Delete</button>
+                <button
+                    onClick={handleClick}
+                    type="button"
+                    className="btn btn-outline-success"
+                >
+                    {props.movie.status}
+                </button>
+                <button
+                    onClick={deleteClick}
+                    type="button"
+                    className="btn btn-outline-danger"
+                >
+                    Delete
+                </button>
             </ActionTools>
         </ItemWrapper>
-    )
-}
+    );
+};
 export default observer(MovieItem);
