@@ -11,6 +11,9 @@ class MovieStore {
         if(movie.status === "watched") movie.status = "watchlist"
         else movie.status = "watched"
     }
+    deleteMovies = (moviesId) => {
+        
+    }
 }
 const movieStore = new MovieStore() // create instance
 export default movieStore; // export it 
