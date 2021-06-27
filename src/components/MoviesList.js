@@ -47,7 +47,7 @@ const MoviesList = () => {
                     <span>{watchListTable.length}</span>
                     <ResultMovie>
                         <SearchMovie>
-                            <input type="search" placeholder="Search..." onChange={event => setQuary(event.target.value)} />
+                            <input type="text" placeholder="Search..." onChange={event => setQuary(event.target.value)} />
                             <SearchIcon />
                         </SearchMovie>
                         <div className='p-3'>
@@ -60,7 +60,7 @@ const MoviesList = () => {
                     <span>{watchTable.length}</span>
                     <ResultMovie>
                         <SearchMovie>
-                            <input type="search" placeholder="Search..." onChange={event => setQuarySecond(event.target.value)} />
+                            <input type="text" placeholder="Search..." onChange={event => setQuarySecond(event.target.value)} />
                             <SearchIcon />
                         </SearchMovie>
                         <div className='p-3'>
