@@ -1,8 +1,10 @@
 import './App.css';
+import MoviesList from './components/MoviesList';
+import { Title } from './styles';
 
 function App() {
   return (
-    <h1>test</h1>
+    <MoviesList />
   );
 }
 
