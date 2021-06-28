@@ -2,6 +2,8 @@
 import styled from 'styled-components'
 /* React Icon */
 import { AiOutlineSearch } from 'react-icons/ai'
+import { BiImageAdd } from 'react-icons/bi'
+
 
 
 /* Start MovieList Componenet */
@@ -62,6 +64,11 @@ export const SearchIcon = styled(AiOutlineSearch)`
     right: 1%;
     font-size: 1.3em;
 `;
+export const AddImageIcon = styled(BiImageAdd) `
+    font-size: 35px;
+    position: relative;
+    left: 0.5%;
+`;
 /* End MovieList Componenet */
 
 /* Start MovieItem Componenet */
@@ -72,6 +79,11 @@ export const ItemWrapper = styled.div`
     padding: 15px;
     p {
         width: 70%;
+        cursor: pointer;
+    }
+    img {
+        width: 20%;
+        margin-right: 15px;
     }
 `;
 export const ActionTools = styled.section`

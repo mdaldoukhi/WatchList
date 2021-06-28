@@ -23,7 +23,7 @@ const MovieItem = (props) => {
   return (
     /* Wrap the Item */
     <ItemWrapper>
-      {isHide ? <img src={props.movie.image} /> : false}
+      {isHide ? <img src={props.movie.image} alt={props.movie.imge}/> : false}
       <p onClick={() => setIshide(!isHide)}>{props.movie.name}</p>
       {/* Buttons section */}
       <ActionTools>
