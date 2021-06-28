@@ -19,7 +19,7 @@ export const ListView = styled.div`
     span {
         position: absolute;
         top: 0.5%;
-        left: 15%;
+        left: 100px;
         font-size: 17px;
         border: 1px solid #000;
         border-radius: 50%;
@@ -27,9 +27,15 @@ export const ListView = styled.div`
         height: 25px;
         line-height: 25px;
         text-align: center;
-
     }
 `;
+export const SearchValue = styled.span `
+    font-size: 12px !important;
+    border-radius: 15px !important;
+    left: 110px !important;
+    padding: 0 5px
+
+`
 export const ResultMovie = styled.div`
     border: 1px solid #000;
     border-radius: 5px;

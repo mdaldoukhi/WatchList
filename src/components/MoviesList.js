@@ -5,6 +5,7 @@ import {
     Wrapper,
     SearchMovie,
     SearchIcon,
+    SearchValue
 } from "../styles";
 /* Componenets */
 import MovieItem from "./MovieItem";
@@ -24,7 +25,7 @@ const MoviesList = () => {
         (movie) => movie.status !== "watched"
     );
     /* Hold the new object and push it to the store [create new WatchList] */
-    const [createMovie, setCreateMovie] = useState({ name: "" });
+    const [createMovie, setCreateMovie] = useState({ name: "" }); // will add new key and value that will hold the image url
     const handleChange = (event) => {
         setCreateMovie({ ...createMovie, [event.target.name]: event.target.value });
     };
@@ -60,6 +61,7 @@ const MoviesList = () => {
                         name="name"
                         onChange={handleChange}
                     />
+                    {/* Will add new input with [name: image] */}
                 </div>
                 <button type="submit" className="btn btn-outline-dark  ">
                     Add
@@ -70,7 +72,7 @@ const MoviesList = () => {
                 {/* Start WatchList Section */}
                 <ListView>
                     <h4>Watchlist</h4>
-                    <span>{watchListTable.length}</span>
+                    {(watchListTable.length === watchList.length) ? <span>{watchListTable.length}</span> : <SearchValue>{`Showing ${watchListTable.length} out of ${watchList.length}`}</SearchValue>}
                     <ResultMovie>
                         <SearchMovie>
                             <input
@@ -90,7 +92,7 @@ const MoviesList = () => {
                 {/* Start Watched Section */}
                 <ListView>
                     <h4>Watched</h4>
-                    <span>{watchTable.length}</span>
+                    {(watchTable.length === watched.length) ? <span>{watchTable.length}</span> : <SearchValue>{`Showing ${watchTable.length} out of ${watched.length}`}</SearchValue>}
                     <ResultMovie>
                         <SearchMovie>
                             <input

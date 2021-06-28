@@ -25,7 +25,7 @@ const MovieItem = (props) => {
                     type="button"
                     className="btn btn-outline-success"
                 >
-                    {props.movie.status}
+                    {(props.movie.status === "watched") ? "Unwatched" : "Watched"}
                 </button>
                 <button
                     onClick={deleteClick}
