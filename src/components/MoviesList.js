@@ -61,8 +61,10 @@ const MoviesList = () => {
                         name="name"
                         onChange={handleChange}
                     />
-                    {/* Will add new input with [name: image] */}
                 </div>
+                {/* Div will hide untill you click the icon BiImageAdd */}
+                {/* Will add new input with [name: image] */}
+
                 <button type="submit" className="btn btn-outline-dark  ">
                     Add
                 </button>
